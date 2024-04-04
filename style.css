@@ -24,7 +24,7 @@ nav{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content:space-between ;
+    justify-content:space-around;
    color: #F6F1EE;
 }
 nav .logo img{
@@ -38,12 +38,27 @@ nav .logo img{
     gap: 2rem;
     align-items: center;
 }
+.logo h1{
+    font-size: clamp(20px, 2vw ,40px);
+}
+nav .hiddenList{
+    display: none;
+    width: 8rem;
+    position: absolute;
+    top: 6rem;
+   left: 92rem;
+   
+   color: #ED7D31;
+   padding: 2rem;
+   background-color: #F6F1EE;
+}
 nav ul{
     list-style: none;
     display: flex;
     gap: 2rem;
     margin-right: 5rem;
     flex-wrap: wrap;
+    
     
 }
 nav li a{
@@ -54,18 +69,90 @@ nav li a{
 }
 nav a:hover{
     font-size: 1.5rem;
-    color: #F6F1EE;
+    
 }
-@media screen and (max-width:767px) {
+.fa-bars{
+    font-size: clamp(20px,3vw,30px);
+    display: none;
+    
+    cursor: pointer;
+}
+@media screen and (max-width:940px) {
     nav .logo img{
+       margin-left: 1rem;
+        width:70px;
+    }
+     .fa-bars{
+       
+        display: block;
+    }
+    nav .listnotHidden li{
         display: none;
     }
     nav ul{
-        gap: 20px;
-        flex-wrap: nowrap;
+        gap: 20 px;
+        
+    }
+    nav .hiddenList{
+        display: none;
+        width: 7rem;
+        position: absolute;
+        top: 5rem;
+       left: 15rem;
+       padding: 2rem;
     }
 }
+@media screen and (max-width:800px){
+    nav .hiddenList{
+        display: none;
+        width: 7rem;
+        position: absolute;
+        top: 6rem;
+       left: 38rem;
+       padding: 2rem;
+    }
+}
+@media screen and (max-width:700px){
+    nav .hiddenList{
+        display: none;
+        width: 7rem;
+        position: absolute;
+        top: 6rem;
+       left: 32rem;
+       padding: 2rem;
+    }
+}
+@media screen and (max-width:600px){
+    nav .hiddenList{
+        display: none;
+        width: 7rem;
+        position: absolute;
+        top: 5.5rem;
+       left: 21rem;
+       padding: 2rem;
+    }
+}
+@media screen and (max-width:500px){
+    nav .hiddenList{
+        display: none;
+        width: 7rem;
+        position: absolute;
+        top: 5.5rem;
+       left: 20rem;
+       padding: 2rem;
+    }
+}
+@media screen and (max-width:400px){
+    nav .hiddenList{
+        display: none;
+        width: 7rem;
+        position: absolute;
+        top: 5.5rem;
+       left: 12rem;
+       padding: 2rem;
+    }
     
+}
 
 .HomePage{
     background-image: url("src/bg website.png");
@@ -157,17 +244,16 @@ nav a:hover{
     display: flex;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-    margin-inline: 5rem;
-    margin-top: 5rem;
+    
+   
 }
 .textAbout{
     max-width: 50vw;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content:center ;
+    margin-inline: 6rem;
    
-    
+    align-items: center;
     gap: 2rem;
     color:#F6F1EE ;
 }
@@ -186,6 +272,7 @@ nav a:hover{
    border-radius: 20px;
     border: none;
     filter: drop-shadow(5px 5px 5px rgba(65, 65, 65, 0.452));
+    
 }
 .textAbout a{
     color: #ED7D31;
@@ -197,6 +284,7 @@ nav a:hover{
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-inline: 6rem;
 }
 .imageAbout img{
     width: clamp(300px,30vw,600px);
@@ -289,11 +377,11 @@ nav a:hover{
     margin-top: 10px;
     display: flex;
     list-style: none;
-    gap: 5px;
+    gap: 10px;
     
 }
 .sizes li{
-    font-size: 11px;
+    font-size: 15px;
     cursor: pointer;
     transition: ease .2s;
 }
