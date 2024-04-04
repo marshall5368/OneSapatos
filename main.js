@@ -32,3 +32,15 @@ function arrowBack(){
     },400)
      
 }
+const list = document.getElementById('list')
+function bars(){
+    if(list.style.display ==="none"){
+    list.style.display ="flex"
+    }else{
+        list.style.display ="none"
+    }  
+   
+}
+function liButton(){
+        list.style.display="none"
+    }
