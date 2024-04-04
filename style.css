@@ -74,7 +74,7 @@ nav a:hover{
 .fa-bars{
     font-size: clamp(20px,3vw,30px);
     display: none;
-    
+    margin-right: 2rem;
     cursor: pointer;
 }
 @media screen and (max-width:940px) {
